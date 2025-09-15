@@ -47,14 +47,6 @@ def update_states(env):
         WHERE active IS DISTINCT FROM TRUE
         """,
     )
-    openupgrade.logged_query(
-        env.cr,
-        """
-        UPDATE hr_leave_allocation
-        SET state = 'cancel'
-        WHERE active IS DISTINCT FROM TRUE
-        """,
-    )
 
 
 def update_allocation_validation_type(env):
